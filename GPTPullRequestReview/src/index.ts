@@ -44,7 +44,7 @@ async function run() {
 
     const filesNames = await getChangedFiles(targetBranch);
 
-    await deleteExistingComments(httpsAgent);
+    // await deleteExistingComments(httpsAgent);
 
     for (const fileName of filesNames) {
       await reviewFile(targetBranch, fileName, httpsAgent, apiKey, openai, aoiEndpoint)
